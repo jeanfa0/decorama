@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Decorama</title>
+    <link rel="stylesheet" href="C:\Users\USUARIO\Downloads\Decorama\CSS\style.css">
+</head>
+<style>
+    .carrito-cuadro {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tfoot td {
+        font-weight: bold;
+    }
+
+    .btn-pagar {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .btn-pagar:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\logo.png" alt="Logo" style="max-height: 50px;">
+            Decorama
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="carrito">
+        <h2>Tu Carrito de Compras</h2>
+        <div class="carrito-cuadro">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body">
+                    <!-- Productos del carrito se insertarán aquí -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total:</td>
+                        <td colspan="2" id="total">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <a href="pagar.html" class="btn-pagar">Pagar</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Decorama. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="C:\Users\USUARIO\Downloads\Decorama\JavaScript\script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const carritoBody = document.getElementById('carrito-body');
+        let total = 0;
+    
+        // Cargar productos en el carrito
+        carrito.forEach((producto, index) => {
+            const tr = document.createElement('tr');
+            const precioUnitario = parseFloat(producto.precio);
+            total += precioUnitario;
+    
+            tr.innerHTML = `
+                <td>${producto.nombre}</td>
+                <td><input type="number" value="1" min="1" class="cantidad" data-precio="${precioUnitario}"></td>
+                <td>$${precioUnitario.toFixed(2)}</td>
+                <td class="total-cell">$${precioUnitario.toFixed(2)}</td>
+                <td><button class="remove" data-index="${index}">Eliminar</button></td>
+            `;
+            carritoBody.appendChild(tr);
+    
+            // Evento para eliminar productos
+            tr.querySelector('.remove').addEventListener('click', (e) => {
+                const index = e.target.dataset.index;
+                carrito.splice(index, 1);
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+                location.reload(); // Recargar la página para actualizar el carrito
+            });
+        });
+    
+        // Mostrar total
+        document.getElementById('total').innerText = `$${total.toFixed(2)}`;
+    
+        // Actualizar total al cambiar la cantidad
+        document.querySelectorAll('.cantidad').forEach(input => {
+            input.addEventListener('input', () => {
+                const cantidad = parseInt(input.value);
+                const precioUnitario = parseFloat(input.dataset.precio);
+    
+                if (!isNaN(cantidad) && !isNaN(precioUnitario)) {
+                    const totalCell = input.closest('tr').querySelector('.total-cell');
+                    const nuevoTotal = cantidad * precioUnitario;
+                    totalCell.innerText = `$${nuevoTotal.toFixed(2)}`;
+    
+                    // Recalcular total
+                    total = Array.from(document.querySelectorAll('.total-cell')).reduce((sum, cell) => {
+                        const cellTotal = cell.innerText.replace('$', '');
+                        return sum + (parseFloat(cellTotal) || 0);
+                    }, 0);
+                    document.getElementById('total').innerText = `$${total.toFixed(2)}`;
+                } else {
+                    console.error("Error en la cantidad o precio:", cantidad, precioUnitario);
+                }
+            });
+        });
+    });
+    </script>
+    

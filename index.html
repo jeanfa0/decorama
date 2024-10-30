@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorama</title>
+    <link rel="stylesheet" href="C:\Users\USUARIO\Downloads\Decorama\CSS\style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\logo.png" alt="Logo" style="max-height: 50px;">
+            Decorama
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="pago.html">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="fade-in">
+        <h2>Bienvenido a Decorama</h2>
+        <p>Ofrecemos una amplia gama de productos de decoración y servicios especializados.</p>
+        <p>Descubre nuestras ofertas destacadas y productos populares.</p>
+    </section>
+
+    <section id="nosotros" class="fade-in">
+        <h2>Nosotros</h2>
+        <p>Decorama es una empresa dedicada a la venta de productos de decoración de alta calidad.</p>
+        <p>Nuestra misión es ofrecer el mejor servicio al cliente y productos de excelencia.</p>
+    </section>
+
+    <section id="productos" class="fade-in">
+        <h2>Productos</h2>
+    
+        <h3>Cortinas</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\cortina elegante.png" alt="Cortina Elegante">
+                <h4>Cortina Elegante</h4>
+                <p>Descripción: Esta cortina elegante añade un toque de sofisticación a cualquier habitación.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 140 x 240 cm</p>
+                <p class="precio">Precio: $35</p>
+                <button class="add-to-cart" data-product-id="1" data-product-name="Cortina Elegante" data-product-price="35">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\cortina moderna.jpeg" alt="Cortina Moderna">
+                <h4>Cortina Moderna</h4>
+                <p>Descripción: Cortina moderna con un diseño minimalista que se adapta a cualquier espacio.</p>
+                <p>Material: Algodón</p>
+                <p>Tamaño: 160 x 260 cm</p>
+                <p class="precio">Precio: $45</p>
+                <button class="add-to-cart" data-product-id="2" data-product-name="Cortina Moderna" data-product-price="45">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\cortina clasica.png" alt="Cortina Clásica">
+                <h4>Cortina Clásica</h4>
+                <p>Descripción: Un diseño clásico que nunca pasa de moda, ideal para cualquier hogar.</p>
+                <p>Material: Mezcla de poliéster y algodón</p>
+                <p>Tamaño: 120 x 240 cm</p>
+                <p class="precio">Precio: $40</p>
+                <button class="add-to-cart" data-product-id="3" data-product-name="Cortina Clásica" data-product-price="40">Agregar al Carrito</button>
+            </div>
+        </div>
+    
+        <h3>Alfombras</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\alfombra suave.jpg" alt="Alfombra Suave">
+                <h4>Alfombra Suave</h4>
+                <p>Descripción: Alfombra suave que brinda confort y calidez a tu hogar.</p>
+                <p>Material: Polipropileno</p>
+                <p>Tamaño: 160 x 230 cm</p>
+                <p class="precio">Precio: $55</p>
+                <button class="add-to-cart" data-product-id="4" data-product-name="Alfombra Suave" data-product-price="55">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\alfombra moderna.jpg" alt="Alfombra Moderna">
+                <h4>Alfombra Moderna</h4>
+                <p>Descripción: Diseño contemporáneo que se adapta perfectamente a espacios modernos.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 200 x 300 cm</p>
+                <p class="precio">Precio: $65</p>
+                <button class="add-to-cart" data-product-id="5" data-product-name="Alfombra Moderna" data-product-price="65">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\alfombra clasica.jpg" alt="Alfombra Clásica">
+                <h4>Alfombra Clásica</h4>
+                <p>Descripción: Alfombra clásica que aporta elegancia a cualquier habitación.</p>
+                <p>Material: Lana</p>
+                <p>Tamaño: 150 x 250 cm</p>
+                <p class="precio">Precio: $60</p>
+                <button class="add-to-cart" data-product-id="6" data-product-name="Alfombra Clásica" data-product-price="60">Agregar al Carrito</button>
+            </div>
+        </div>
+    
+        <h3>Muebles</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\sofa comodo.jpg" alt="Sofá Cómodo">
+                <h4>Sofá Cómodo</h4>
+                <p>Descripción: Sofá cómodo, ideal para relajarse después de un largo día.</p>
+                <p>Material: Tela y espuma de alta densidad</p>
+                <p>Tamaño: 220 x 90 x 90 cm</p>
+                <p class="precio">Precio: $350</p>
+                <button class="add-to-cart" data-product-id="7" data-product-name="Sofá Cómodo" data-product-price="350">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\mesita de noche.jpg" alt="Mesita de Noche">
+                <h4>Mesita de Noche</h4>
+                <p>Descripción: Mesita de noche con un diseño minimalista y funcional.</p>
+                <p>Material: Madera MDF</p>
+                <p>Tamaño: 50 x 40 x 60 cm</p>
+                <p class="precio">Precio: $160</p>
+                <button class="add-to-cart" data-product-id="8" data-product-name="Mesita de Noche" data-product-price="160">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\estanteria moderna.jpg" alt="Estantería Moderna">
+                <h4>Estantería Moderna</h4>
+                <p>Descripción: Estantería moderna para organizar tus libros y decoraciones.</p>
+                <p>Material: Madera contrachapada</p>
+                <p>Tamaño: 80 x 30 x 180 cm</p>
+                <p class="precio">Precio: $220</p>
+                <button class="add-to-cart" data-product-id="9" data-product-name="Estantería Moderna" data-product-price="220">Agregar al Carrito</button>
+            </div>
+        </div>
+    
+        <h3>Persianas</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\persiana vertical.jpg" alt="Persiana Vertical">
+                <h4>Persiana Vertical</h4>
+                <p>Descripción: Persiana vertical que permite un control óptimo de la luz.</p>
+                <p>Material: PVC</p>
+                <p>Tamaño: 120 x 240 cm</p>
+                <p class="precio">Precio: $75</p>
+                <button class="add-to-cart" data-product-id="10" data-product-name="Persiana Vertical" data-product-price="75">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\persiana horizontal.jpg" alt="Persiana Horizontal">
+                <h4>Persiana Horizontal</h4>
+                <p>Descripción: Persiana horizontal que combina funcionalidad y estilo.</p>
+                <p>Material: Aluminio</p>
+                <p>Tamaño: 100 x 240 cm</p>
+                <p class="precio">Precio: $85</p>
+                <button class="add-to-cart" data-product-id="11" data-product-name="Persiana Horizontal" data-product-price="85">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\persiana enrollable.jpg" alt="Persiana Enrollable">
+                <h4>Persiana Enrollable</h4>
+                <p>Descripción: Persiana enrollable perfecta para espacios modernos.</p>
+                <p>Material: Tela de poliéster</p>
+                <p>Tamaño: 100 x 240 cm</p>
+                <p class="precio">Precio: $80</p>
+                <button class="add-to-cart" data-product-id="12" data-product-name="Persiana Enrollable" data-product-price="80">Agregar al Carrito</button>
+            </div>
+        </div>
+    
+        <h3>Estores</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\Estor blackout.jpg" alt="Estor Blackout">
+                <h4>Estor Blackout</h4>
+                <p>Descripción: Estor blackout que bloquea la luz completamente.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 100 x 200 cm</p>
+                <p class="precio">Precio: $95</p>
+                <button class="add-to-cart" data-product-id="13" data-product-name="Estor Blackout" data-product-price="95">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\estor decorativo.jpg" alt="Estor Decorativo">
+                <h4>Estor Decorativo</h4>
+                <p>Descripción: Estor decorativo que añade un toque de estilo a tu hogar.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 90 x 200 cm</p>
+                <p class="precio">Precio: $85</p>
+                <button class="add-to-cart" data-product-id="14" data-product-name="Estor Decorativo" data-product-price="85">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\estor termico.jpg" alt="Estor Térmico">
+                <h4>Estor Térmico</h4>
+                <p>Descripción: Estor térmico que ayuda a regular la temperatura interior.</p>
+                <p>Material: Poliéster con aislamiento</p>
+                <p>Tamaño: 100 x 200 cm</p>
+                <p class="precio">Precio: $90</p>
+                <button class="add-to-cart" data-product-id="15" data-product-name="Estor Térmico" data-product-price="90">Agregar al Carrito</button>
+            </div>
+        </div>
+    
+        <h3>Rollers</h3>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\Roller blackout.jpg" alt="Roller Blackout">
+                <h4>Roller Blackout</h4>
+                <p>Descripción: Roller blackout ideal para espacios que requieren oscuridad total.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 100 x 200 cm</p>
+                <p class="precio">Precio: $75</p>
+                <button class="add-to-cart" data-product-id="16" data-product-name="Roller Blackout" data-product-price="75">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\Roller translucido.jpg" alt="Roller Translúcido">
+                <h4>Roller Translúcido</h4>
+                <p>Descripción: Roller translúcido que permite la entrada de luz de manera controlada.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 100 x 200 cm</p>
+                <p class="precio">Precio: $80</p>
+                <button class="add-to-cart" data-product-id="17" data-product-name="Roller Translúcido" data-product-price="80">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\USUARIO\Downloads\Decorama\Imagenes\Roller decorativo.jpg" alt="Roller Decorativo">
+                <h4>Roller Decorativo</h4>
+                <p>Descripción: Roller decorativo que aporta estilo y funcionalidad.</p>
+                <p>Material: Poliéster</p>
+                <p>Tamaño: 100 x 200 cm</p>
+                <p class="precio">Precio: $85</p>
+                <button class="add-to-cart" data-product-id="18" data-product-name="Roller Decorativo" data-product-price="85">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>    
+
+    <section id="servicios" class="fade-in">
+        <h2>Servicios</h2>
+        <p>Ofrecemos servicios de lavado especializados para cortinas, alfombras, muebles, estores y rollers.</p>
+        <p>Consulte nuestros precios y detalles sobre cada servicio.</p>
+    </section>
+
+    <section id="contacto" class="fade-in">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="mensaje">Comentarios:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mapa">
+            <h3>Nuestra ubicación</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509216!2d144.9537353153173!3d-37.81627997975169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0e2bb9f7%3A0x5045675218ceed0!2sAvenida%20Julio%20Baylleti%20204%2C%20Tienda%2009!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar"
+                loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2023 Decorama. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="C:\Users\USUARIO\Downloads\Decorama\JavaScript\script.js"></script>
+</body>
+
+</html>
